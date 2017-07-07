@@ -30,7 +30,7 @@
 | [HTML entity reference]       | No               | No               | Yes              | No               |
 | [DTD entity reference]        | No               | No               | No               | No               |
 | `xml:space`                   | No               | No               | No               | No               |
-| Non UTF-8 input               | No               | No               | No               | No               |
+| Non UTF-8 input               | No               | No               | Yes              | No               |
 | [XPath]                       | No               | No               | No               | [Yes][7:4]       |
 | [XQuery]                      | No               | No               | No               | No               |
 | Event parser                  | Yes              | Yes              | Yes              | No               |
@@ -63,21 +63,21 @@ cargo run --example quick_xml data/small.xml
 ## Performance
 
 ```
-test quick_xml_large     ... bench:   1,899,961 ns/iter (+/- 19,762)
-test quick_xml_medium    ... bench:     606,169 ns/iter (+/- 12,840)
-test quick_xml_small     ... bench:       6,861 ns/iter (+/- 337)
+test quick_xml_large     ... bench:   1,935,674 ns/iter (+/- 2,550)
+test quick_xml_medium    ... bench:     600,100 ns/iter (+/- 3,576)
+test quick_xml_small     ... bench:       6,748 ns/iter (+/- 26)
 
 test sxd_document_large  ... bench:      failed
-test sxd_document_medium ... bench:   2,556,833 ns/iter (+/- 53,307)
-test sxd_document_small  ... bench:      39,422 ns/iter (+/- 1,562)
+test sxd_document_medium ... bench:   2,499,074 ns/iter (+/- 12,759)
+test sxd_document_small  ... bench:      39,248 ns/iter (+/- 78)
 
-test xml5ever_large      ... bench:   8,318,061 ns/iter (+/- 38,335)
-test xml5ever_medium     ... bench:   7,403,966 ns/iter (+/- 39,070)
-test xml5ever_small      ... bench:      44,433 ns/iter (+/- 528)
+test xml5ever_large      ... bench:   8,216,309 ns/iter (+/- 6,228)
+test xml5ever_medium     ... bench:   7,305,346 ns/iter (+/- 10,139)
+test xml5ever_small      ... bench:      43,917 ns/iter (+/- 63)
 
-test xmlrs_large         ... bench:  26,283,106 ns/iter (+/- 155,005)
-test xmlrs_medium        ... bench:  13,513,665 ns/iter (+/- 15,710)
-test xmlrs_small         ... bench:      92,391 ns/iter (+/- 149)
+test xmlrs_large         ... bench:  26,470,342 ns/iter (+/- 34,884)
+test xmlrs_medium        ... bench:  13,817,106 ns/iter (+/- 12,688)
+test xmlrs_small         ... bench:      93,457 ns/iter (+/- 107)
 ```
 
 You can run benchmarks by yourself using `cargo bench`.
