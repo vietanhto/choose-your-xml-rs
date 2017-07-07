@@ -31,20 +31,20 @@
 | [DTD entity reference]        | No                   | No                   | No                   | No                   |
 | `xml:space`                   | No                   | No                   | No                   | No                   |
 | Non UTF-8 input               | No                   | Yes                  | No                   | No                   |
-| [XPath]                       | No                   | No                   | No                   | Yes<sup>2</sup>      |
+| [XPath]                       | No                   | No                   | No                   | Extern<sup>2</sup>   |
 | [XQuery]                      | No                   | No                   | No                   | No                   |
-| Pull parser                   | Yes                  | Yes                  | No                   | No                   |
-| Push parser                   | No                   | No                   | Yes                  | No                   |
-| Error recovery                | No                   | No                   | Partial<sup>3</sup>  | No                   |
-| DOM                           | Yes<sup>4</sup>      | Yes<sup>5</sup>      | Yes<sup>6</sup>      | Yes                  |
+| Pull parser                   | Yes                  | Yes                  | No                   | -                    |
+| Push parser                   | No                   | No                   | Yes                  | -                    |
+| DOM                           | Extern<sup>3</sup>   | Extern<sup>4</sup>   | Yes<sup>5</sup>      | Yes                  |
+| Error recovery                | No                   | No                   | Partial<sup>6</sup>  | No                   |
 | Writing                       | Yes                  | Yes                  | Yes                  | Yes                  |
 
 1. Only DTD without children. Also as stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#when-you-shouldnt-use-it).
 2. Via [`sxd-xpath`](https://crates.io/crates/sxd-xpath) crate.
-3. As stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#xml5ever).
-4. Via [`treexml`](https://crates.io/crates/treexml) or [`elementtree`](https://crates.io/crates/elementtree) crates.
-5. Via [`minidom`](https://crates.io/crates/minidom) crate.
-6. Using [`rcdom`](https://github.com/servo/html5ever/blob/master/markup5ever/rcdom.rs) module from the crate.
+3. Via [`treexml`](https://crates.io/crates/treexml) or [`elementtree`](https://crates.io/crates/elementtree) crates.
+4. Via [`minidom`](https://crates.io/crates/minidom) crate.
+5. Using [`rcdom`](https://github.com/servo/html5ever/blob/master/markup5ever/rcdom.rs) module from the crate.
+6. As stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#xml5ever).
 
 [Document type definition]: https://en.wikipedia.org/wiki/Document_type_definition
 [Numeric character reference]: https://en.wikipedia.org/wiki/Numeric_character_reference
