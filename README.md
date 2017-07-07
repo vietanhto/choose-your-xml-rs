@@ -33,6 +33,7 @@
 | Non UTF-8 input               | No                   | Yes                  | No                   | No                   |
 | [XPath]                       | No                   | No                   | No                   | Extern<sup>2</sup>   |
 | [XQuery]                      | No                   | No                   | No                   | No                   |
+| Streaming parser              | Yes                  | Yes                  | Yes                  | No                   |
 | Pull parser                   | Yes                  | Yes                  | No                   | -                    |
 | Push parser                   | No                   | No                   | Yes                  | -                    |
 | DOM                           | Extern<sup>3</sup>   | Extern<sup>4</sup>   | Yes<sup>5</sup>      | Yes                  |
