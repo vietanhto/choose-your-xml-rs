@@ -33,7 +33,7 @@
 | Non UTF-8 input               | No                   | Yes                  | No                   | No                   |
 | [XPath]                       | No                   | No                   | No                   | Yes<sup>2</sup>      |
 | [XQuery]                      | No                   | No                   | No                   | No                   |
-| Event parser                  | Yes                  | Yes                  | Yes                  | No                   |
+| Pull parser                   | Yes                  | Yes                  | No                   | No                   |
 | Push parser                   | No                   | No                   | Yes                  | No                   |
 | Error recovery                | No                   | No                   | Partial<sup>3</sup>  | No                   |
 | DOM                           | Yes<sup>4</sup>      | Yes<sup>5</sup>      | Yes<sup>6</sup>      | Yes                  |
