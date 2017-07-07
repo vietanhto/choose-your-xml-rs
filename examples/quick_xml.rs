@@ -1,6 +1,5 @@
 extern crate quick_xml;
 
-use std::borrow::Borrow;
 use std::env;
 use std::io::BufReader;
 use std::fs::File;
@@ -9,6 +8,8 @@ use std::str::{self, Utf8Error};
 use quick_xml::reader::Reader;
 use quick_xml::events::{Event, BytesStart, BytesText};
 use quick_xml::errors::Error as XmlError;
+
+type XmlReader = Reader<BufReader<File>>;
 
 #[derive(Debug)]
 enum Error {
@@ -58,28 +59,28 @@ fn parse(path: &str) -> Result<()> {
         match reader.read_namespaced_event(&mut buf, &mut ns_buf)? {
             (ns, Event::Start(ref e)) => {
                 print_tag_name("Start", ns, e.local_name(), depth)?;
-                print_attributes(&e, depth)?;
+                print_attributes(&reader, &e, depth)?;
                 depth += 1;
             }
             (ns, Event::Empty(ref e)) => {
                 print_tag_name("Empty", ns, e.local_name(), depth)?;
-                print_attributes(&e, depth)?;
+                print_attributes(&reader, &e, depth)?;
             }
             (ns, Event::End(ref e)) => {
                 depth -= 1;
                 print_tag_name("End", ns, e.local_name(), depth)?;
             }
             (_, Event::Comment(ref e)) => {
-                print_text("Comment", e, depth)?;
+                print_text(&reader, "Comment", e, depth)?;
             }
             (_, Event::CData(ref e)) => {
-                print_text("CDATA", e, depth)?;
+                print_text(&reader, "CDATA", e, depth)?;
             }
             (_, Event::PI(ref e)) => {
-                print_text("Processing Instruction", e, depth)?;
+                print_text(&reader, "Processing Instruction", e, depth)?;
             }
             (_, Event::DocType(ref e)) => {
-                print_text("Document Type", e, depth)?;
+                print_text(&reader, "Document Type", e, depth)?;
             }
             (_, Event::Decl(ref e)) => {
                 indent(depth);
@@ -101,7 +102,7 @@ fn parse(path: &str) -> Result<()> {
                 }
             }
             (_, Event::Text(ref e)) => {
-                print_text("  Text", e, depth)?;
+                print_text(&reader, "  Text", e, depth)?;
             }
             (_, Event::Eof) => break,
         }
@@ -127,21 +128,21 @@ fn print_tag_name(title: &str, ns: Option<&[u8]>, tag_name: &[u8], depth: usize)
     Ok(())
 }
 
-fn print_attributes(e: &BytesStart, depth: usize) -> Result<()> {
+fn print_attributes(r: &XmlReader, e: &BytesStart, depth: usize) -> Result<()> {
     for a in e.attributes() {
         let a = a?;
         indent(depth + 1);
         println!("  Attribute: {}=\"{}\"",
             str::from_utf8(a.key)?,
-            str::from_utf8(a.unescaped_value()?.borrow())?);
+            a.unescape_and_decode_value(r)?);
     }
 
     Ok(())
 }
 
-fn print_text(title: &str, e: &BytesText, depth: usize) -> Result<()> {
+fn print_text(r: &XmlReader, title: &str, e: &BytesText, depth: usize) -> Result<()> {
     indent(depth);
-    println!("{}: {:?}", title, str::from_utf8(&e.unescaped()?)?);
+    println!("{}: {:?}", title, e.unescape_and_decode(r)?);
 
     Ok(())
 }
