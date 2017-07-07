@@ -57,6 +57,7 @@ fn quick_xml_parse(text: &str) {
             Ok((_, quick_xml::events::Event::Eof)) => break,
             _ => {}
         }
+        buf.clear();
     }
 }
 
