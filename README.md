@@ -30,7 +30,7 @@
 | [HTML entity reference]       | No               | No               | Yes              | No               |
 | [DTD entity reference]        | No               | No               | No               | No               |
 | `xml:space`                   | No               | No               | No               | No               |
-| Non UTF-8 input               | No               | No               | Yes              | No               |
+| Non UTF-8 input               | No               | Yes              | No               | No               |
 | [XPath]                       | No               | No               | No               | [Yes][7:4]       |
 | [XQuery]                      | No               | No               | No               | No               |
 | Event parser                  | Yes              | Yes              | Yes              | No               |
