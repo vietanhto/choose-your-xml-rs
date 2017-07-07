@@ -21,23 +21,30 @@
 
 ## Features
 
-| Feature/Crate                 | xml-rs           | quick-xml        | xml5ever         | sxd-document     |
-| ----------------------------- | ---------------- | ---------------- | ---------------- | ---------------- |
-| [Document type definition]    | No               | No               | [Partial][1:3]   | Partial          |
-| Namespaces                    | Yes              | Yes              | ?                | Yes              |
-| [Numeric character reference] | Yes              | Yes              | Yes              | Yes              |
-| [XML entity reference]        | Yes              | Yes              | Yes              | Yes              |
-| [HTML entity reference]       | No               | No               | Yes              | No               |
-| [DTD entity reference]        | No               | No               | No               | No               |
-| `xml:space`                   | No               | No               | No               | No               |
-| Non UTF-8 input               | No               | Yes              | No               | No               |
-| [XPath]                       | No               | No               | No               | [Yes][7:4]       |
-| [XQuery]                      | No               | No               | No               | No               |
-| Event parser                  | Yes              | Yes              | Yes              | No               |
-| Push parser                   | No               | No               | Yes              | No               |
-| Error recovery                | No               | No               | Partial          | No               |
-| DOM                           | No               | No               | [Yes][11:3]      | Yes              |
-| Writing                       | Yes              | Yes              | Yes              | Yes              |
+| Feature/Crate                 | xml-rs               | quick-xml            | xml5ever             | sxd-document         |
+| ----------------------------- | -------------------- | -------------------- | -------------------- | -------------------- |
+| [Document type definition]    | No                   | No                   | Partial<sup>1</sup>  | No                   |
+| Namespaces                    | Yes                  | Yes                  | ?                    | Yes                  |
+| [Numeric character reference] | Yes                  | Yes                  | Yes                  | Yes                  |
+| [XML entity reference]        | Yes                  | Yes                  | Yes                  | Yes                  |
+| [HTML entity reference]       | No                   | No                   | Yes                  | No                   |
+| [DTD entity reference]        | No                   | No                   | No                   | No                   |
+| `xml:space`                   | No                   | No                   | No                   | No                   |
+| Non UTF-8 input               | No                   | Yes                  | No                   | No                   |
+| [XPath]                       | No                   | No                   | No                   | Yes<sup>2</sup>      |
+| [XQuery]                      | No                   | No                   | No                   | No                   |
+| Event parser                  | Yes                  | Yes                  | Yes                  | No                   |
+| Push parser                   | No                   | No                   | Yes                  | No                   |
+| Error recovery                | No                   | No                   | Partial<sup>3</sup>  | No                   |
+| DOM                           | Yes<sup>4</sup>      | Yes<sup>5</sup>      | Yes<sup>6</sup>      | Yes                  |
+| Writing                       | Yes                  | Yes                  | Yes                  | Yes                  |
+
+1. Only DTD without children. Also as stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#when-you-shouldnt-use-it).
+2. Via [`sxd-xpath`](https://crates.io/crates/sxd-xpath) crate.
+3. As stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#xml5ever).
+4. Via [`treexml`](https://crates.io/crates/treexml) or [`elementtree`](https://crates.io/crates/elementtree) crates.
+5. Via [`minidom`](https://crates.io/crates/minidom) crate.
+6. Using [`rcdom`](https://github.com/servo/html5ever/blob/master/markup5ever/rcdom.rs) module from the crate.
 
 [Document type definition]: https://en.wikipedia.org/wiki/Document_type_definition
 [Numeric character reference]: https://en.wikipedia.org/wiki/Numeric_character_reference
@@ -46,10 +53,6 @@
 [XML entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML
 [HTML entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_entity_references_in_HTML
 [DTD entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_reference_overview
-
-[1:3]: https://github.com/servo/html5ever/blob/master/xml5ever/README.md#when-you-shouldnt-use-it
-[11:3]: https://github.com/servo/html5ever/blob/master/markup5ever/rcdom.rs
-[7:4]: https://crates.io/crates/sxd-xpath
 
 You can test features by yourself using corresponding example:
 
