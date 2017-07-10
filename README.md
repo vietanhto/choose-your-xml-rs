@@ -21,24 +21,24 @@
 
 ## Features
 
-| Feature/Crate                 | xml-rs               | quick-xml            | xml5ever             | sxd-document         |
-| ----------------------------- | -------------------- | -------------------- | -------------------- | -------------------- |
-| [Document type definition]    | No                   | No                   | Partial<sup>1</sup>  | No                   |
-| Namespaces                    | Yes                  | Yes                  | ?                    | Yes                  |
-| [Numeric character reference] | Yes                  | Yes                  | Yes                  | Yes                  |
-| [XML entity reference]        | Yes                  | Yes                  | Yes                  | Yes                  |
-| [HTML entity reference]       | No                   | No                   | Yes                  | No                   |
-| [DTD entity reference]        | No                   | No                   | No                   | No                   |
-| `xml:space`                   | No                   | No                   | No                   | No                   |
-| Non UTF-8 input               | No                   | Yes                  | No                   | No                   |
-| [XPath]                       | No                   | No                   | No                   | Extern<sup>2</sup>   |
-| [XQuery]                      | No                   | No                   | No                   | No                   |
-| Streaming parser              | Yes                  | Yes                  | Yes                  | No                   |
-| Pull parser                   | Yes                  | Yes                  | No                   | -                    |
-| Push parser                   | No                   | No                   | Yes                  | -                    |
-| DOM                           | Extern<sup>3</sup>   | Extern<sup>4</sup>   | Yes<sup>5</sup>      | Yes                  |
-| Error recovery                | No                   | No                   | Partial<sup>6</sup>  | No                   |
-| Writing                       | Yes                  | Yes                  | Yes                  | Yes                  |
+|         Feature/Crate         |       xml-rs       |     quick-xml      |       xml5ever      |    sxd-document    |
+| ----------------------------- | ------------------ | ------------------ | ------------------- | ------------------ |
+| [Document type definition]    | No                 | No                 | Partial<sup>1</sup> | No                 |
+| Namespaces                    | Yes                | Yes                | Yes                 | Yes                |
+| [Numeric character reference] | Yes                | Yes                | Yes                 | Yes                |
+| [XML entity reference]        | Yes                | Yes                | Yes                 | Yes                |
+| [HTML entity reference]       | No                 | No                 | Yes                 | No                 |
+| [DTD entity reference]        | No                 | No                 | No                  | No                 |
+| `xml:space`                   | No                 | No                 | No                  | No                 |
+| Non UTF-8 input               | No                 | Yes                | No                  | No                 |
+| [XPath]                       | No                 | No                 | No                  | Extern<sup>2</sup> |
+| [XQuery]                      | No                 | No                 | No                  | No                 |
+| Streaming parser              | Yes                | Yes                | Yes                 | No                 |
+| Pull parser                   | Yes                | Yes                | No                  | -                  |
+| Push parser                   | No                 | No                 | Yes                 | -                  |
+| DOM                           | Extern<sup>3</sup> | Extern<sup>4</sup> | Yes<sup>5</sup>     | Yes                |
+| Error recovery                | No                 | No                 | Partial<sup>6</sup> | No                 |
+| Writing                       | Yes                | Yes                | Yes                 | Yes                |
 
 1. Only DTD without children. Also as stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#when-you-shouldnt-use-it).
 2. Via [`sxd-xpath`](https://crates.io/crates/sxd-xpath) crate.
