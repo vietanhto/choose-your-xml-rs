@@ -5,10 +5,10 @@ authors = ["Reizner Evgeniy <razrfalcon@gmail.com>"]
 
 [dev-dependencies]
 bencher = "0.1"
-xml-rs = "0.6.0"
-quick-xml = "0.8.1"
-xml5ever = "0.8.0"
-sxd-document = "0.2.2"
+xml-rs = "0.7"
+quick-xml = "0.9"
+xml5ever = "0.11"
+sxd-document = "0.2"
 
 [[bench]]
 name = "xml"

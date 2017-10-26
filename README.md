@@ -67,21 +67,21 @@ cargo run --example quick_xml data/small.xml
 ## Performance
 
 ```
-test quick_xml_large     ... bench:   1,935,674 ns/iter (+/- 2,550)
-test quick_xml_medium    ... bench:     600,100 ns/iter (+/- 3,576)
-test quick_xml_small     ... bench:       6,748 ns/iter (+/- 26)
+test quick_xml_large     ... bench:   1,864,496 ns/iter (+/- 1,292)
+test quick_xml_medium    ... bench:     465,637 ns/iter (+/- 539)
+test quick_xml_small     ... bench:       6,339 ns/iter (+/- 24)
 
 test sxd_document_large  ... bench:      failed
-test sxd_document_medium ... bench:   2,499,074 ns/iter (+/- 12,759)
-test sxd_document_small  ... bench:      39,248 ns/iter (+/- 78)
+test sxd_document_medium ... bench:   2,639,623 ns/iter (+/- 11,376)
+test sxd_document_small  ... bench:      42,252 ns/iter (+/- 149)
 
-test xml5ever_large      ... bench:   8,216,309 ns/iter (+/- 6,228)
-test xml5ever_medium     ... bench:   7,305,346 ns/iter (+/- 10,139)
-test xml5ever_small      ... bench:      43,917 ns/iter (+/- 63)
+test xml5ever_large      ... bench:   8,621,706 ns/iter (+/- 9,631)
+test xml5ever_medium     ... bench:   7,181,995 ns/iter (+/- 8,180)
+test xml5ever_small      ... bench:      45,492 ns/iter (+/- 49)
 
-test xmlrs_large         ... bench:  26,470,342 ns/iter (+/- 34,884)
-test xmlrs_medium        ... bench:  13,817,106 ns/iter (+/- 12,688)
-test xmlrs_small         ... bench:      93,457 ns/iter (+/- 107)
+test xmlrs_large         ... bench:  25,715,749 ns/iter (+/- 27,183)
+test xmlrs_medium        ... bench:  12,798,271 ns/iter (+/- 13,670)
+test xmlrs_small         ... bench:      90,392 ns/iter (+/- 132)
 ```
 
 You can run benchmarks by yourself using `cargo bench`.
