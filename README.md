@@ -31,7 +31,7 @@
 | [DTD entity reference]        | No                 | No                 | No                  | No                 |
 | `xml:space`                   | No                 | No                 | No                  | No                 |
 | Non UTF-8 input               | No                 | Yes                | No                  | No                 |
-| [XPath]                       | No                 | No                 | No                  | Extern<sup>2</sup> |
+| [XPath]                       | No                 | No                 | No                  | 1.0<sup>2</sup>    |
 | [XQuery]                      | No                 | No                 | No                  | No                 |
 | Streaming parser              | Yes                | Yes                | Yes                 | No                 |
 | Pull parser                   | Yes                | Yes                | No                  | -                  |
