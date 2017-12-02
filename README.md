@@ -1,8 +1,6 @@
 # Choose your XML
 
-## Features
-
-|         Feature/Crate         |       xml-rs       |     quick-xml      |       xml5ever      |    sxd-document    |
+|         Feature/Crate         |       [xml-rs]     |     [quick-xml]    |       [xml5ever]    |    [sxd-document]  |
 | ----------------------------- | ------------------ | ------------------ | ------------------- | ------------------ |
 | [Document type definition]    | No                 | No                 | Partial<sup>1</sup> | No                 |
 | Namespaces                    | Yes                | Yes                | Yes                 | Yes                |
@@ -30,6 +28,11 @@
 4. Via [`minidom`](https://crates.io/crates/minidom) crate.
 5. Using [`rcdom`](https://github.com/servo/html5ever/blob/master/markup5ever/rcdom.rs) module from the crate.
 6. As stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#xml5ever).
+
+[xml-rs]: https://crates.io/crates/xml-rs
+[quick-xml]: https://crates.io/crates/quick-xml
+[xml5ever]: https://crates.io/crates/xml5ever
+[sxd-document]: https://crates.io/crates/sxd-document
 
 [Document type definition]: https://en.wikipedia.org/wiki/Document_type_definition
 [Numeric character reference]: https://en.wikipedia.org/wiki/Numeric_character_reference
