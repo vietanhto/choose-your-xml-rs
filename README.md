@@ -1,24 +1,5 @@
 # Choose your XML
 
-## Crates
-
-| | |
-| --- | --- |
-| [xml-rs](https://crates.io/crates/xml-rs) | ![Version][xml-rs-version] ![CI][xml-rs-travis] |
-| [quick-xml](https://crates.io/crates/quick-xml) | ![Version][quick-xml-version] ![CI][quick-xml-travis] |
-| [xml5ever](https://crates.io/crates/xml5ever) | ![Version][xml5ever-version] ![CI][xml5ever-travis] |
-| [sxd-document](https://crates.io/crates/sxd-document) | ![Version][sxd-document-version] ![CI][sxd-document-travis] |
-
-[xml-rs-version]: https://img.shields.io/crates/v/xml-rs.svg
-[quick-xml-version]: https://img.shields.io/crates/v/quick-xml.svg
-[xml5ever-version]: https://img.shields.io/crates/v/xml5ever.svg
-[sxd-document-version]: https://img.shields.io/crates/v/sxd-document.svg
-
-[xml-rs-travis]: https://img.shields.io/travis/netvl/xml-rs.svg
-[quick-xml-travis]: https://img.shields.io/travis/tafia/quick-xml.svg
-[xml5ever-travis]: https://img.shields.io/travis/servo/html5ever.svg
-[sxd-document-travis]: https://img.shields.io/travis/shepmaster/sxd-document.svg
-
 ## Features
 
 |         Feature/Crate         |       xml-rs       |     quick-xml      |       xml5ever      |    sxd-document    |
@@ -39,6 +20,9 @@
 | DOM                           | Extern<sup>3</sup> | Extern<sup>4</sup> | Yes<sup>5</sup>     | Yes                |
 | Error recovery                | No                 | No                 | Partial<sup>6</sup> | No                 |
 | Writing                       | Yes                | Yes                | Yes                 | Yes                |
+| Tested version                | 0.7.0              | 0.10.0             | 0.11.1              | 0.2.4              |
+| Latest version                | ![][xml-rs-ver]    | ![][quick-xml-ver] | ![][xml5ever-ver]   | ![][sxd-doc-ver]   |
+| License                       | MIT                | MIT                | MIT / Apache-2.0    | MIT                |
 
 1. Only DTD without children. Also as stated in the [readme](https://github.com/servo/html5ever/blob/master/xml5ever/README.md#when-you-shouldnt-use-it).
 2. Via [`sxd-xpath`](https://crates.io/crates/sxd-xpath) crate.
@@ -54,6 +38,11 @@
 [XML entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML
 [HTML entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_entity_references_in_HTML
 [DTD entity reference]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_reference_overview
+
+[xml-rs-ver]: https://img.shields.io/crates/v/xml-rs.svg
+[quick-xml-ver]: https://img.shields.io/crates/v/quick-xml.svg
+[xml5ever-ver]: https://img.shields.io/crates/v/xml5ever.svg
+[sxd-doc-ver]: https://img.shields.io/crates/v/sxd-document.svg
 
 You can test features by yourself using corresponding example:
 

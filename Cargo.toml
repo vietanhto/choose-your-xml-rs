@@ -6,7 +6,7 @@ authors = ["Reizner Evgeniy <razrfalcon@gmail.com>"]
 [dev-dependencies]
 bencher = "0.1"
 xml-rs = "0.7"
-quick-xml = "0.9"
+quick-xml = "0.10"
 xml5ever = "0.11"
 sxd-document = "0.2"
 
