@@ -1,0 +1,108 @@
+<svg height="320" width="740" xmlns="http://www.w3.org/2000/svg">
+<path d="m663.61 17.339h96v50h-96z" fill="none"/>
+<path d="m663.61 17.339h96v12h-96z" fill="none"/>
+<text fill="#222" font-family="Arial" font-size="12" x="692.61" y="27.539">large</text>
+<path d="m663.61 17.339h24v12h-24z" fill="#36c"/>
+<path d="m663.61 36.339h96v12h-96z" fill="none"/>
+<text fill="#222" font-family="Arial" font-size="12" x="692.61" y="46.539">medium</text>
+<path d="m663.61 36.339h24v12h-24z" fill="#dc3912"/>
+<path d="m663.61 55.339h96v12h-96z" fill="none"/>
+<text fill="#222" font-family="Arial" font-size="12" x="692.61" y="65.539">small</text>
+<path d="m663.61 55.339h24v12h-24z" fill="#f90"/>
+<path d="m91.61 17.339h560v247h-560z" fill="none"/>
+<g fill="#ccc">
+<path d="m91.61 17.339h1v247h-1z"/>
+<path d="m231.61 17.339h1v247h-1z"/>
+<path d="m371.61 17.339h1v247h-1z"/>
+<path d="m510.61 17.339h1v247h-1z"/>
+<path d="m650.61 17.339h1v247h-1z"/>
+</g>
+<g fill="#36c">
+<path d="m92.61 29.339h34v12h-34z"/>
+<path d="m91.61 91.339h.5v12h-.5z"/>
+<path d="m92.61 152.339h160v12h-160z"/>
+<path d="m92.61 214.339h478v12h-478z"/>
+</g>
+<g fill="#dc3912">
+<path d="m92.61 42.339h8v12h-8z"/>
+<path d="m92.61 104.339h48v12h-48z"/>
+<path d="m92.61 165.339h133v12h-133z"/>
+<path d="m92.61 227.339h237v12h-237z"/>
+</g>
+<g fill="#f90">
+<path d="m92.134 55.339h.5v12h-.5z"/>
+<path d="m92.268 117.339h.63v12h-.63z"/>
+<path d="m92.28 178.339h.678v12h-.678z"/>
+<path d="m92.447 240.339h1.347v12h-1.347z"/>
+</g>
+<path d="m91.61 17.339h1v247h-1z" fill="#333"/>
+<g fill="#999" transform="translate(-28.39 -59.661)">
+<path d="m155 95h12v1h-12z"/>
+<path d="m120.5 157h12v1h-12z"/>
+<path d="m281 218h12v1h-12z"/>
+<path d="m599 280h12v1h-12z"/>
+<path d="m129 108h12v1h-12z"/>
+<path d="m169 170h12v1h-12z"/>
+<path d="m254 231h12v1h-12z"/>
+<path d="m358 293h12v1h-12z"/>
+<path d="m121.024 121h12v1h-12z"/>
+<path d="m121.287 183h12v1h-12z"/>
+<path d="m121.348 244h12v1h-12z"/>
+<path d="m122.184 306h12v1h-12z"/>
+</g>
+<g font-family="Arial" font-size="12" transform="translate(-28.39 -59.661)">
+<g fill="#4d4d4d" text-anchor="middle">
+<text x="120.5" y="341.2">0</text>
+<text x="260.25" y="341.2">7,500,000</text>
+<text x="400" y="341.2">15,000,000</text>
+<text x="539.75" y="341.2">22,500,000</text>
+<text x="679.5" y="341.2">30,000,000</text>
+</g>
+<g fill="#848484" text-anchor="end">
+<text x="108" y="112.45">quick-xml</text>
+<text x="108" y="173.95">sdx-document</text>
+<text x="108" y="235.45">xml5ever</text>
+<text x="108" y="296.95">xml-rs</text>
+</g>
+</g>
+<g font-family="Arial" font-size="12">
+<path d="m136.11 28.839h60v14h-60z" fill="none"/>
+<text fill="#36c" x="138.61" y="39.539">1,864,496</text>
+<path d="m138.61 29.339h54v12h-54z" fill="none"/>
+<path d="m102.11 90.839h12v14h-12z" fill="none"/>
+<text fill="#36c" x="104.11" y="101.539">0</text>
+<path d="m104.11 91.339h7v12h-7z" fill="none"/>
+<path d="m262.11 151.839h60v14h-60z" fill="none"/>
+<text fill="#36c" x="264.61" y="162.539">8,621,706</text>
+<path d="m264.61 152.339h54v12h-54z" fill="none"/>
+<path d="m580.11 213.839h66v14h-66z" fill="none"/>
+<text fill="#36c" x="582.61" y="224.539">25,715,749</text>
+<path d="m582.61 214.339h60v12h-60z" fill="none"/>
+<path d="m110.11 41.839h50v14h-50z" fill="none"/>
+<text fill="#dc3912" x="112.61" y="52.539">465,637</text>
+<path d="m112.61 42.339h44v12h-44z" fill="none"/>
+<path d="m150.11 103.839h60v14h-60z" fill="none"/>
+<text fill="#dc3912" x="152.61" y="114.539">2,639,623</text>
+<path d="m152.61 104.339h54v12h-54z" fill="none"/>
+<path d="m235.11 164.839h60v14h-60z" fill="none"/>
+<text fill="#dc3912" x="237.61" y="175.539">7,181,995</text>
+<path d="m237.61 165.339h54v12h-54z" fill="none"/>
+<path d="m339.11 226.839h66v14h-66z" fill="none"/>
+<text fill="#dc3912" x="341.61" y="237.539">12,798,271</text>
+<path d="m341.61 227.339h60v12h-60z" fill="none"/>
+<path d="m103.11 54.839h35v14h-35z" fill="none"/>
+<text fill="#f90" x="104.634" y="65.539">6,339</text>
+<path d="m104.634 55.339h30v12h-30z" fill="none"/>
+<path d="m103.11 116.839h42v14h-42z" fill="none"/>
+<text fill="#f90" x="104.897" y="127.539">42,252</text>
+<path d="m104.897 117.339h37v12h-37z" fill="none"/>
+<path d="m103.11 177.839h42v14h-42z" fill="none"/>
+<text fill="#f90" x="104.958" y="188.539">45,492</text>
+<path d="m104.958 178.339h37v12h-37z" fill="none"/>
+<path d="m104.11 239.839h42v14h-42z" fill="none"/>
+<text fill="#f90" x="105.794" y="250.539">90,392</text>
+<path d="m105.794 240.339h37v12h-37z" fill="none"/>
+<text fill="#4d4d4d" font-style="italic" text-anchor="middle" x="371.61" y="316.039">Parsed by (ns)</text>
+<path d="m91.61 305.839h560v12h-560z" fill="none"/>
+</g>
+</svg>
