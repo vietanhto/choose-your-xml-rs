@@ -76,6 +76,8 @@ test xmlrs_medium        ... bench:  12,798,271 ns/iter (+/- 13,670)
 test xmlrs_small         ... bench:      90,392 ns/iter (+/- 132)
 ```
 
+![](chart.svg)
+
 You can run benchmarks by yourself using `cargo bench`.
 
 \* Note that `sxd-document` generates a whole DOM.
