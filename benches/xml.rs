@@ -1,10 +1,11 @@
 #[macro_use]
 extern crate bencher;
 
-extern crate xml;
+extern crate dummy_xml;
 extern crate quick_xml;
-extern crate xml5ever;
 extern crate sxd_document;
+extern crate xml;
+extern crate xml5ever;
 
 use std::fs;
 use std::env;
@@ -48,12 +49,12 @@ fn quick_xml_parse(text: &str) {
     let mut ns_buf = Vec::new();
     loop {
         match t.read_namespaced_event(&mut buf, &mut ns_buf) {
-            Ok((_, quick_xml::events::Event::Start(ref e))) => {
-                for a in e.attributes() {
-                    let _ = a.unwrap().unescaped_value();
-                }
+            Ok((_, quick_xml::events::Event::Start(ref e))) => for a in e.attributes() {
+                let _ = a.unwrap().unescaped_value();
+            },
+            Ok((_, quick_xml::events::Event::Text(ref e))) => {
+                let _ = e.unescaped();
             }
-            Ok((_, quick_xml::events::Event::Text(ref e))) => { let _ = e.unescaped(); }
             Ok((_, quick_xml::events::Event::Eof)) => break,
             _ => {}
         }
@@ -79,7 +80,7 @@ fn quick_xml_large(bencher: &mut Bencher) {
 struct Xml5Token;
 
 impl xml5ever::tokenizer::TokenSink for Xml5Token {
-    fn process_token(&mut self, _: xml5ever::tokenizer::Token) { }
+    fn process_token(&mut self, _: xml5ever::tokenizer::Token) {}
 }
 
 fn xml5ever_parse(text: &str) {
@@ -121,10 +122,30 @@ fn sxd_document_medium(bencher: &mut Bencher) {
     bencher.iter(|| sxd_document_parse(&text))
 }
 
+fn dummy_xml_parse(text: &String) {
+    let _ = dummy_xml::parser::parse_string(text);
+}
+
+fn dummy_xml_small(bencher: &mut Bencher) {
+    let text = load_file("data/small.xml");
+    bencher.iter(|| dummy_xml_parse(&text))
+}
+
+fn dummy_xml_medium(bencher: &mut Bencher) {
+    let text = load_file("data/medium.xml");
+    bencher.iter(|| dummy_xml_parse(&text))
+}
+
+fn dummy_xml_large(bencher: &mut Bencher) {
+    let text = load_file("data/large.plist");
+    bencher.iter(|| dummy_xml_parse(&text))
+}
+
 // sxd_document can't open large.plist
 
 benchmark_group!(benches1, xmlrs_small, xmlrs_medium, xmlrs_large);
 benchmark_group!(benches2, quick_xml_small, quick_xml_medium, quick_xml_large);
 benchmark_group!(benches3, xml5ever_small, xml5ever_medium, xml5ever_large);
 benchmark_group!(benches4, sxd_document_small, sxd_document_medium);
-benchmark_main!(benches1, benches2, benches3, benches4);
+benchmark_group!(benches5, dummy_xml_small, dummy_xml_medium, dummy_xml_large);
+benchmark_main!(benches1, benches2, benches3, benches4, benches5);

@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Reizner Evgeniy <razrfalcon@gmail.com>"]
 
 [dev-dependencies]
+dummy_xml = "0.1.6"
 bencher = "0.1"
 xml-rs = "0.7"
 quick-xml = "0.10"
